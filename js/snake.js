@@ -34,7 +34,6 @@ function loop() {
     
     count = 0;
     context.clearRect(0, 0, canvas.width, canvas.height);
-    // Двигаем змейку с нужной скоростью
     snake.x += snake.dx;
     snake.y += snake.dy;
     if (snake.x < 0) {
@@ -53,7 +52,6 @@ function loop() {
         snake.maxCells = 4;
         snake.dx = grid;
         snake.dy = 0;
-        // Ставим яблочко в случайное место
         apple.x = getRandomInt(0, 25) * grid;
         apple.y = getRandomInt(0, 25) * grid;
     }
